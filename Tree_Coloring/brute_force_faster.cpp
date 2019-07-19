@@ -81,7 +81,7 @@ void dist(int x = 1, int y = 0){
         if (vis[i]) continue;
 
         d[i] = y + 1;
-        dist(i);
+        dist(i, y + 1);
     }
 }
  
@@ -104,7 +104,8 @@ signed main()
     }
  
     F(1, n);
- 
+    dist();
+
     for (auto& i : a){
         for (int j = 0; j < n; ++j){
             if (!i[j])
