@@ -15,30 +15,11 @@ typedef vector<char> vc;
 typedef vector<string> vs;
 typedef vector<pi> vp;
 typedef vector<pl> vpl;
-typedef basic_string<int> bs; //No pun intented
 
 int n;
 vi e[2000], p(2000), g[2000];
 queue<int> q;
 vb vis(2000);
-
-int pow2(int a, int k){
-    
-    if (k == 0)
-    	return 1;
-
-    if (k == 1)
-    	return a;
-
-    ll tmp = pow2(a, k / 2);
-    tmp = tmp * tmp;
-    
-    if (k & 1)
-    	tmp = tmp * a;
-    
-    return tmp;
-}	
-
 
 bool done(int x){
 	for (auto& i : e[x])
@@ -50,7 +31,6 @@ struct dpr{
 	int x; //1
 	int y; //0
 
-	bs g[2000];
 	bitset<100> b1, b0;
 };
 
