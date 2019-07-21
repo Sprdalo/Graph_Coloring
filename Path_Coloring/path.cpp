@@ -28,6 +28,12 @@ signed main()
 
     cout << n / 3 + min(n % 3, 1ll) << '\n';
     for (int i = 0; i < n; ++i)
+        
+        if (i == n - 1 && n % 3 == 1){
+            cout << (n % 2) + 1 << ' ';
+            continue;
+        }
+        
         if (i % 3 == 1)
             if (i % 2)
                 cout << "1 ";
