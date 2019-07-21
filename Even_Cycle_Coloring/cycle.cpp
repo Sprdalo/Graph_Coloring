@@ -26,8 +26,14 @@ signed main()
     int n;
     cin >> n;
 
-    cout << n / 3 + min(n % 3, 1ll) << '\n';
+    cout << n / 3 + 1ll << '\n';
     for (int i = 0; i < n; ++i){
+
+    	if (i == n - 1 && !(n % 3)){
+    		cout << (n % 2) + 1 << ' ';
+    		continue;
+    	}
+
         if (i % 3){
             cout << "0 ";
             continue;
